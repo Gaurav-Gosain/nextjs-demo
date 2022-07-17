@@ -1,16 +1,14 @@
 import { Button } from "@mui/material";
 import Head from "next/head";
+import CustomButton from "../components/CustomButton";
+import CustomCard from "../components/CustomCard"
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
-      <Button
-        className="p-8 text-3xl rounded-2xl"
-        color="primary"
-        variant="contained"
-      >
-        Welcome to GDSC!
-      </Button>
+    <div className="w-screen min-h-screen flex flex-col justify-center items-center">
+      <CustomCard />
+      <CustomButton title="Hello World!" color="secondary" variant="contained" />
+      <CustomButton color="error" variant="outlined" />
     </div>
   );
 }
