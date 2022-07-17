@@ -1,5 +1,3 @@
-import { Button } from "@mui/material";
-import Head from "next/head";
 import CustomButton from "../components/CustomButton";
 import CustomCard from "../components/CustomCard"
 
