@@ -29,9 +29,7 @@ const CustomCard = () => {
     <Card className="w-80 mb-8 rounded-3xl" elevation={20}>
       <CardHeader
         avatar={
-          <Avatar
-            src={"https://source.unsplash.com/random/300x300/?person"}
-          />
+          <Avatar src={"https://source.unsplash.com/random/300x300/?person"} />
         }
         action={
           <div>
@@ -43,7 +41,13 @@ const CustomCard = () => {
             >
               <MoreVertIcon />
             </IconButton>
-            <Menu anchorEl={buttonRef} open={open}>
+            <Menu
+              anchorEl={buttonRef}
+              open={open}
+              onClose={() => {
+                setOpen(false); // closes the menu when you click outside the menu
+              }}
+            >
               {["Item 1", "Item 2", "Item 3"].map((item) => {
                 return (
                   <MenuItem
